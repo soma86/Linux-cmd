@@ -1,0 +1,62 @@
+# basic linux cmds for aws
+1. ls
+2. ls -a
+3. ls -l
+4. mkdir dir1 -> make directory 'dir1'
+5. cd dir1 -> change to directory - 'dir1'
+6. cd .. -> go back to home directory
+7. cd / -> go to the root directory
+8. cd OR cd ~ -> takes me from root directory to home directory
+9. cd ~/dir1 -> takes to directory 'dir1' inside of home
+10. clear -> clears out the terminal
+11. touch file1.txt -> touch cmd creates a file in the directory.
+12. vi or nano file1.txt -> edit the file
+13. Control + x -> to exit the file | Y to save and Enter to exit.
+14. cat file1.txt -> to view content of a file.
+15. less file1.txt  -> page down, if file is a big one.
+16. q - to quit without saving
+17. control + c to break cmd
+18. mv file1.txt file2.txt -> mv to rename a file
+19. cp file2.txt file3.txt -> cp - to copy a file 
+20. cp file3.txt ~/dir/file3.txt -> to copy file to another directory
+21. rm file3.txt -> remove/delete file
+22. rm ~/dir/file1.txt -> remove file in 'dir' directory from home directory
+23. rmdir dir -> remove directory
+24.  rm -R dir2 -> recursive delete, deletes all file in the directory along with the directory itself.
+25. which -> is used to identify the location of executables
+26. history -> returns the history of cmds that were run (last 500 cmds)
+SYSTEM Cmds:
+27. sudo su -> run anything as root user
+28. ifconfig -> gives network config
+29. iwconfig -> gives wireless network information
+30. ping google.com -> ping cmd can be used to ping other services/computer/ipaddress online
+31: blkid -> returns the harddrive information. 
+Eg:
+/dev/xvda1: LABEL="/" UUID="43c07df6-e944-4b25-8fd1-5ff848b584b2" TYPE="ext4" PARTLABEL="Linux" PARTUUID="e3466a0c-3a36-48a8-8bc2-f5ab5ee2afec"
+32. top -> returns processes, like the amount of memory, cpu etc, almost similiar to task manager in windows
+33. df -> returns available or unavailable disk space
+34. lspci ->prints ("lists") detailed information about all PCI buses and devices in the system
+Eg:
+ 00:00.0 Host bridge: Intel Corporation 440FX - 82441FX PMC [Natoma] (rev 02)
+00:01.0 ISA bridge: Intel Corporation 82371SB PIIX3 ISA [Natoma/Triton II]
+00:01.1 IDE interface: Intel Corporation 82371SB PIIX3 IDE [Natoma/Triton II]
+00:01.3 Bridge: Intel Corporation 82371AB/EB/MB PIIX4 ACPI (rev 01)
+00:02.0 VGA compatible controller: Cirrus Logic GD 5446
+00:03.0 Unassigned class [ff80]: XenSource, Inc. Xen Platform Device (rev 01)
+
+pakage management:
+35. sudo: apt-get -> to install packages 
+sudo: apt-get: command not found
+# apt-get doesnot work with AWS, use 'yum' instead
+36. yum install -> eg. yum install httpd -y -> installs all packages of httpd
+37. yum remove httpd -y -> removes packages from.
+eg. yum remove httpd -y
+38. yum update httpd -> updates packages
+
+linux system restart | shutdown
+39. shutdown -r 1 -> -r cmd is to restart/reboot in 1 min
+40. shutdown -h 1 -> -h cmd is to completely shut down the system
+1- is the time i.e. say shutdown in 1 min(-h -> halt)
+
+
+41. uname -a OR uname -> returns information of the OS, system
